@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-
 
   <title>Easybank</title>
 </head>
@@ -17,35 +16,46 @@
 
   <div class="wrapper">
 
-    <header class="main-header">
+    <header class="header">
+
       <a class="logo" href="#">
         <img class="logo-image" src="assets/images/logo.svg" alt="Easybank Logotype">
       </a>
+      <input class="nav-toggle-menu" id="nav-toggle-menu" type="checkbox">
+      <label class="nav-toggle-label" for="nav-toggle-menu">
+        <span class="nav-toggle-menu-icon"></span>
+      </label>
       <nav class="nav-bar">
         <ul class="nav-bar-list">
-          <li><a class="nav-bar-list-item" href="#">Home</a></li>
-          <li><a class="nav-bar-list-item" href="#about">About</a></li>
-          <li><a class="nav-bar-list-item" href="#contact">Contact</a></li>
-          <li><a class="nav-bar-list-item" href="#blog">Blog</a></li>
-          <li><a class="nav-bar-list-item" href="#careers">Careers</a></li>
+          <li class="nav-bar-list-item">
+            <a class="nav-bar-list-item-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-bar-list-item">
+            <a class="nav-bar-list-item-link" href="#">About</a>
+          </li>
+          <li class="nav-bar-list-item">
+            <a class="nav-bar-list-item-link" href="#">Contact</a>
+          </li>
+          <li class="nav-bar-list-item">
+            <a class="nav-bar-list-item-link" href="#">Blog</a>
+          </li>
+          <li class="nav-bar-list-item">
+            <a class="nav-bar-list-item-link" href="#">Careers</a>
+          </li>
         </ul>
       </nav>
-      <nav class="menu">
-        <img class="burguer-icon" src="assets/images/icon-hamburger.svg" alt="Menu">
-      </nav>
       <button class="invite-button">Request Invite</button>
+
     </header>
 
-    <main>
+    <main class="main">
 
       <section class="hero-section">
-
         <div class="hero-image">
           <img class="phones-mockups" src="assets/images/image-mockups.png" alt="Phones Mockups">
         </div>
-
-        <div class="call-to-action ">
-          <h1 class="cta-header">Next generation digital banking</h1>
+        <div class="call-to-action">
+          <h1 class="cta-header">Next generation <span class="cta-header no-wrap">digital banking</span></h1>
           <p class="paragraph"> Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
           <button class="invite-button">Request Invite</button>
         </div>
@@ -115,24 +125,59 @@
     </main>
 
     <footer class="footer">
-      <img class="logo" src="assets/images/logo-white.svg" alt="Easybank Logotype">
+      <a class="logo" href="#">
+        <img class="logo-image" src="assets/images/logo-white.svg" alt="Easybank Logotype">
+      </a>
+
       <div class="social-media-icons">
-        <img class="social-media-icon" src="assets/images/icon-facebook.svg" alt="Facebook">
-        <img class="social-media-icon" src="assets/images/icon-youtube.svg" alt="Youtube">
-        <img class="social-media-icon" src="assets/images/icon-twitter.svg" alt="Twitter">
-        <img class="social-media-icon" src="assets/images/icon-instagram.svg" alt="Instagram">
-        <img class="social-media-icon" src="assets/images/icon-pinterest.svg" alt="Pinterest">
+        <a href="#" class="social-media-icon-link">
+          <svg class="social-media-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.496v-9.294h-3.13v-3.622h3.127V8.412c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.462.098 2.795.143v3.24h-1.918c-1.505 0-1.795.716-1.795 1.764v2.313h3.587l-.468 3.622h-3.12V24h6.117c.73 0 1.323-.593 1.323-1.325V1.325A1.323 1.323 0 0022.675 0z" />
+          </svg>
+        </a>
+        <a href="#" class="social-media-icon-link">
+          <svg class="social-media-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.374 0 0 5.374 0 12c0 6.628 5.374 12 12 12 6.628 0 12-5.372 12-12 0-6.626-5.372-12-12-12zm4.441 16.892c-2.102.144-6.783.144-8.882 0C5.282 16.736 5.017 15.622 5 12c.017-3.629.285-4.736 2.559-4.892 2.099-.144 6.781-.144 8.882 0 2.278.156 2.542 1.27 2.56 4.892-.018 3.629-.286 4.736-2.56 4.892zm-6.44-7.234l4.916 2.338-4.916 2.346V9.658z" />
+          </svg>
+        </a>
+        <a href="#" class="social-media-icon-link">
+          <svg class="social-media-icon" viewbox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M29.5 2.863a12.104 12.104 0 01-3.476.953 6.068 6.068 0 002.66-3.348 12.148 12.148 0 01-3.843 1.469A6.047 6.047 0 0020.423.025c-3.907 0-6.777 3.646-5.895 7.431A17.189 17.189 0 012.055 1.133c-1.596 2.75-.77 6.312 1.873 8.079a6.019 6.019 0 01-2.742-.755c-.067 2.804 1.942 5.428 4.852 6.011a6.067 6.067 0 01-2.733.103 6.068 6.068 0 005.655 4.203A12.172 12.172 0 010 21.282 17.14 17.14 0 009.277 24c11.236 0 17.584-9.49 17.201-18.001a12.344 12.344 0 003.021-3.133l.001-.003z" />
+          </svg>
+        </a>
+        <a href="#" class="social-media-icon-link">
+          <svg class="social-media-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.374 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.406.042-3.441.219-.936 1.407-5.964 1.407-5.964s-.359-.72-.359-1.783c0-1.668.967-2.914 2.172-2.914 1.022 0 1.517.768 1.517 1.69 0 1.029-.654 2.568-.994 3.996-.283 1.194.6 2.168 1.776 2.168 2.134 0 3.773-2.249 3.773-5.496 0-2.872-2.064-4.882-5.013-4.882-3.414 0-5.418 2.562-5.418 5.208 0 1.031.398 2.138.894 2.738a.358.358 0 01.083.345l-.333 1.36c-.053.219-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.263 7.929-7.263 4.163 0 7.398 2.968 7.398 6.932 0 4.136-2.607 7.464-6.228 7.464-1.215 0-2.358-.63-2.749-1.378l-.748 2.854c-.271 1.042-1.002 2.349-1.492 3.145C9.57 23.813 10.763 24 12 24c6.626 0 12-5.372 12-12S18.626 0 12 0z" />
+          </svg>
+        </a>
+        <a href="#" class="social-media-icon-link">
+          <svg class="social-media-icon" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.999 2.162c3.204 0 3.584.012 4.85.071 3.252.148 4.771 1.691 4.92 4.919.058 1.265.069 1.644.069 4.848 0 3.206-.012 3.586-.07 4.85-.149 3.225-1.663 4.77-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.583-.012-4.848-.07-3.261-.149-4.771-1.699-4.92-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.848.149-3.228 1.664-4.772 4.92-4.92 1.265-.058 1.644-.07 4.848-.07zm0-2.162C8.741 0 8.333.014 7.052.072 2.694.272.271 2.69.072 7.052.013 8.333 0 8.741 0 12c0 3.259.013 3.668.072 4.948.199 4.358 2.617 6.78 6.979 6.98 1.282.058 1.69.072 4.948.072 3.259 0 3.668-.014 4.949-.072 4.353-.2 6.781-2.618 6.979-6.98.059-1.28.072-1.689.072-4.948 0-3.259-.013-3.667-.072-4.946-.196-4.355-2.616-6.78-6.978-6.982C15.667.012 15.258 0 11.999 0zm0 5.838C8.618 5.838 5.837 8.62 5.837 12s2.781 6.162 6.162 6.162c3.38 0 6.162-2.782 6.162-6.162s-2.782-6.162-6.162-6.162zm0 10.162c-2.194 0-4-1.806-4-4s1.806-4 4-4 3.999 1.806 3.999 4-1.805 4-3.999 4zm6.407-11.844h-.001c-.79 0-1.44.65-1.44 1.44 0 .789.65 1.439 1.439 1.44.79 0 1.44-.65 1.44-1.44 0-.79-.65-1.44-1.44-1.44h.002z" />
+          </svg>
+        </a>
       </div>
-      <nav class="navigation-bar">
-        <ul class="list">
-          <li class="list-item">About Us</li>
-          <li class="list-item">Contact</li>
-          <li class="list-item">Blog</li>
-          <li class="list-item">Careers</li>
-          <li class="list-item">Support</li>
-          <li class="list-item">Privacy Policy</li>
-        </ul>
-      </nav>
+
+      <ul class="nav-bar-list">
+        <li class="nav-bar-list-item">
+          <a class="nav-bar-list-item-link" href="#">About Us</a>
+        </li>
+        <li class="nav-bar-list-item">
+          <a class="nav-bar-list-item-link" href="#">Contact</a>
+        </li>
+        <li class="nav-bar-list-item">
+          <a class="nav-bar-list-item-link" href="#">Blog</a>
+        </li>
+        <li class="nav-bar-list-item">
+          <a class="nav-bar-list-item-link" href="#">Careers</a>
+        </li>
+        <li class="nav-bar-list-item">
+          <a class="nav-bar-list-item-link" href="#">Support</a>
+        </li>
+        <li class="nav-bar-list-item">
+          <a class="nav-bar-list-item-link" href="#">Privacy Pokicy</a>
+        </li>
+      </ul>
+
       <button class="invite-button">Request Invite</button>
       <p class="copyright">© Easybank. All Rights Reserved</p>
       <div class="attribution">
