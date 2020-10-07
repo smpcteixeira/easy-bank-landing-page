@@ -56,7 +56,7 @@ h4 {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 50;
+    z-index: 1;
 
     .logo {
       display: flex;
@@ -78,6 +78,7 @@ h4 {
       position: absolute;
       right: 0;
       top: 0;
+      user-select: none;
     }
 
     .nav-toggle-label .nav-toggle-menu-icon,
@@ -87,7 +88,6 @@ h4 {
       display: block;
       height: $size-2;
       position: relative;
-      transition: background .2s ease-out;
       width: $size-24;
     }
 
@@ -95,7 +95,6 @@ h4 {
     .nav-toggle-label .nav-toggle-menu-icon::after {
       content: '';
       position: absolute;
-      transition: all .2 ease-out;
     }
 
     .nav-toggle-label .nav-toggle-menu-icon::before {
@@ -108,17 +107,17 @@ h4 {
 
     .nav-bar {
       background-color: $color-white;
-      display: none;
       left: 0;
-      height: $size-240;
+      height: 0;
       position: absolute;
       text-align: center;
       top: 100%;
-      transition: display .2s ease-out;
+      transition: height 300ms ease-in-out;
       width: 100%;
 
       .nav-bar-list {
         @include box-shadow;
+        visibility: hidden;
 
         .nav-bar-list-item {
           height: $size-48;
@@ -145,7 +144,12 @@ h4 {
     }
 
     .nav-toggle-menu:checked ~ .nav-bar {
-      display: block;
+      height: $size-240;
+    }
+
+    .nav-toggle-menu:checked ~ .nav-bar .nav-bar-list {
+      visibility: visible;
+      transition: visibility 250ms ease-in 200ms;
     }
 
     .invite-button {
@@ -372,7 +376,7 @@ h4 {
 /**
 * Small Tablet
 **/
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 620px) {
 
   .wrapper {
 

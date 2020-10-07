@@ -68,7 +68,7 @@ h4 {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 50; }
+  z-index: 1; }
   /* line 61, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .logo {
     display: flex;
@@ -87,8 +87,9 @@ h4 {
     padding: 0 1.5rem;
     position: absolute;
     right: 0;
-    top: 0; }
-  /* line 83, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    top: 0;
+    user-select: none; }
+  /* line 84, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .nav-toggle-label .nav-toggle-menu-icon,
   .wrapper .header .nav-toggle-label .nav-toggle-menu-icon::before,
   .wrapper .header .nav-toggle-label .nav-toggle-menu-icon::after {
@@ -96,39 +97,37 @@ h4 {
     display: block;
     height: 0.125rem;
     position: relative;
-    transition: background .2s ease-out;
     width: 1.5rem; }
   /* line 94, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .nav-toggle-label .nav-toggle-menu-icon::before,
   .wrapper .header .nav-toggle-label .nav-toggle-menu-icon::after {
     content: '';
-    position: absolute;
-    transition: all .2 ease-out; }
-  /* line 101, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    position: absolute; }
+  /* line 100, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .nav-toggle-label .nav-toggle-menu-icon::before {
     bottom: 0.375rem; }
-  /* line 105, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 104, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .nav-toggle-label .nav-toggle-menu-icon::after {
     top: 0.375rem; }
-  /* line 109, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 108, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .nav-bar {
     background-color: white;
-    display: none;
     left: 0;
-    height: 15rem;
+    height: 0;
     position: absolute;
     text-align: center;
     top: 100%;
-    transition: display .2s ease-out;
+    transition: height 300ms ease-in-out;
     width: 100%; }
-    /* line 120, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 118, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .header .nav-bar .nav-bar-list {
-      box-shadow: 0.0625rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.1); }
-      /* line 123, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+      box-shadow: 0.0625rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.1);
+      visibility: hidden; }
+      /* line 122, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
       .wrapper .header .nav-bar .nav-bar-list .nav-bar-list-item {
         height: 3rem;
         position: relative; }
-        /* line 127, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+        /* line 126, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
         .wrapper .header .nav-bar .nav-bar-list .nav-bar-list-item .nav-bar-list-item-link {
           color: #2d314d;
           height: 100%;
@@ -139,28 +138,32 @@ h4 {
           display: flex;
           align-items: center;
           justify-content: center; }
-          /* line 138, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+          /* line 137, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
           .wrapper .header .nav-bar .nav-bar-list .nav-bar-list-item .nav-bar-list-item-link:hover {
             background-color: #2d314d;
             color: white; }
-  /* line 147, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 146, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .nav-toggle-menu:checked ~ .nav-bar {
-    display: block; }
-  /* line 151, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    height: 15rem; }
+  /* line 150, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  .wrapper .header .nav-toggle-menu:checked ~ .nav-bar .nav-bar-list {
+    visibility: visible;
+    transition: visibility 250ms ease-in 200ms; }
+  /* line 155, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .header .invite-button {
     display: none; }
 
-/* line 158, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+/* line 162, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
 .wrapper .main .hero-section {
   background: url(assets/images/bg-intro-mobile.svg) no-repeat center -265px;
   background-size: cover;
   background-color: #fafafa;
   margin-top: 4rem;
   padding: 0 1.5rem; }
-  /* line 165, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 169, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .hero-section .hero-image {
     min-height: 268px; }
-    /* line 168, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 172, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .main .hero-section .hero-image .phones-mockups {
       position: absolute;
       top: -60px;
@@ -168,18 +171,18 @@ h4 {
       transform: translate(-50%);
       width: 90%;
       max-width: 360px; }
-  /* line 178, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 182, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .hero-section .call-to-action {
     display: flex;
     flex-direction: column;
     align-items: center; }
-    /* line 183, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 187, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .main .hero-section .call-to-action .cta-header {
       font-size: 2.375rem;
       font-weight: 300;
       text-align: center;
       margin-top: 3.125rem; }
-    /* line 190, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 194, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .main .hero-section .call-to-action .invite-button {
       background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
       border-radius: 1.375rem;
@@ -194,35 +197,35 @@ h4 {
       .wrapper .main .hero-section .call-to-action .invite-button:hover {
         opacity: 0.8; }
 
-/* line 197, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+/* line 201, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
 .wrapper .main .features-section {
   background-color: #f3f4f6;
   padding: 0 1.5rem; }
-  /* line 202, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 206, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .features-section .features-header {
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
     padding-top: 3.75rem; }
-  /* line 209, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 213, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .features-section .paragraph {
     margin-bottom: 3.75rem; }
-  /* line 213, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 217, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .features-section .icon-card {
     display: flex;
     flex-direction: column; }
-    /* line 217, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 221, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .main .features-section .icon-card .card-icon {
       height: 4.625rem;
       width: 4.625rem;
       position: relative;
       left: 50%;
       transform: translate(-50%); }
-    /* line 225, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 229, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .main .features-section .icon-card .card-header {
       margin-top: 1.75rem; }
 
-/* line 231, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+/* line 235, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
 .wrapper .main .articles-section {
   background-color: #fafafa;
   display: flex;
@@ -230,13 +233,13 @@ h4 {
   align-items: center;
   padding: 0 1.5rem;
   padding-bottom: 4rem; }
-  /* line 239, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 243, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .articles-section .articles-header {
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
     padding: 3.75rem 0 1.5rem 0; }
-  /* line 246, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 250, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .articles-section .article-card {
     display: flex;
     flex-wrap: wrap;
@@ -244,74 +247,74 @@ h4 {
     background-color: white;
     margin-bottom: 1.5rem;
     max-width: 500px; }
-    /* line 254, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 258, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .main .articles-section .article-card .article-image {
       max-width: 100%; }
-    /* line 258, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 262, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .main .articles-section .article-card .article-content {
       padding: 1.875rem 2rem 2.75rem 2rem; }
-      /* line 261, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+      /* line 265, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
       .wrapper .main .articles-section .article-card .article-content .article-author {
         color: #9698a6;
         font-size: 0.75rem;
         font-weight: 300; }
-      /* line 267, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+      /* line 271, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
       .wrapper .main .articles-section .article-card .article-content .article-header {
         cursor: pointer;
         text-align: left;
         margin: 1rem 0; }
-        /* line 272, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+        /* line 276, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
         .wrapper .main .articles-section .article-card .article-content .article-header:hover {
           color: #31d35c; }
-      /* line 277, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+      /* line 281, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
       .wrapper .main .articles-section .article-card .article-content .article-paragraph {
         color: #9698a6;
         font-size: 0.875rem;
         font-weight: 300; }
 
-/* line 287, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+/* line 291, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
 .wrapper .footer {
   background-color: #2d314d;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 1.5rem; }
-  /* line 294, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 298, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .footer .logo {
     padding: 2.5rem 0 1.375rem 0; }
-    /* line 297, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 301, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .footer .logo .logo-image {
       height: 1.25rem; }
-  /* line 302, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 306, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .footer .social-media-icons {
     height: 2.5rem;
     margin-bottom: 1.875rem; }
-    /* line 306, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 310, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .footer .social-media-icons .social-media-icon-link {
       cursor: pointer;
       display: inline-block;
       height: inherit; }
-      /* line 311, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+      /* line 315, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
       .wrapper .footer .social-media-icons .social-media-icon-link .social-media-icon {
         fill: white;
         height: 1.5rem;
         margin: 0.5rem 0.5rem; }
-        /* line 316, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+        /* line 320, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
         .wrapper .footer .social-media-icons .social-media-icon-link .social-media-icon:hover {
           fill: #31d35c; }
-  /* line 325, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 329, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .footer .nav-bar-list .nav-bar-list-item {
     text-align: center; }
-    /* line 328, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 332, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .footer .nav-bar-list .nav-bar-list-item .nav-bar-list-item-link {
       color: white;
       cursor: pointer;
       display: block;
       padding: 0.75rem 0; }
-      /* line 334, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+      /* line 338, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
       .wrapper .footer .nav-bar-list .nav-bar-list-item .nav-bar-list-item-link:hover {
         color: #31d35c; }
-  /* line 341, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 345, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .footer .invite-button {
     background: linear-gradient(90deg, #31d35c 0%, #2bb7da 100%);
     border-radius: 1.375rem;
@@ -325,40 +328,40 @@ h4 {
     /* line 81, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/variables.scss */
     .wrapper .footer .invite-button:hover {
       opacity: 0.8; }
-  /* line 346, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 350, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .footer .copyright {
     color: white;
     padding: 1.875rem 0 2.75rem 0; }
-  /* line 351, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 355, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .footer .attribution {
     margin-bottom: 0.625rem; }
-    /* line 354, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 358, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .footer .attribution .description {
       color: #9698a6;
       font-size: 0.75rem;
       text-align: center; }
-    /* line 360, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+    /* line 364, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
     .wrapper .footer .attribution .link {
       color: white;
       font-size: 0.75rem; }
-      /* line 364, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+      /* line 368, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
       .wrapper .footer .attribution .link:hover {
         color: #31d35c; }
 
 /**
 * Small Tablet
 **/
-@media only screen and (min-width: 600px) {
-  /* line 381, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+@media only screen and (min-width: 620px) {
+  /* line 385, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .hero-section {
     padding: 0 3.125rem; }
-  /* line 385, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 389, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .features-section {
     padding: 0 3.125rem; }
-  /* line 389, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 393, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .main .articles-section {
     padding: 0 3.125rem; }
-  /* line 395, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
+  /* line 399, /Users/user-admin/Documents/Frontend Mentor/easy-bank-landing-page/easybank-landing-page-master/styles.scss */
   .wrapper .footer {
     padding: 0 3.125rem; } }
 
